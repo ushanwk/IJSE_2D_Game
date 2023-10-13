@@ -1,0 +1,137 @@
+body{
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+}
+
+.scene{
+    height: 100vh;
+    width: 100vw;
+}
+
+
+#rocket{
+    transform: rotate(90deg);
+    position: absolute;
+    top: 350px;
+    left: 270px;
+    animation: animate 0.2s ease infinite;
+}
+
+@Keyframes animate{
+
+    0%, 100%{
+        left: 275px;
+    }
+
+    50%{
+        left: 270px;
+    }
+
+}
+
+
+#smoke{
+    width: 10px;
+    height: 200px;
+    background: linear-gradient(white, transparent);
+    transform: rotate(90deg);
+
+    position: absolute;
+    top: 300px;
+    left: 150px;
+    animation: animateSmoke 0.2s ease infinite;
+}
+
+@Keyframes animateSmoke{
+
+    0%, 100%{
+        left: 150px;
+    }
+
+    50%{
+        left: 145px;
+    }
+
+}
+
+
+#bullet{
+    height: 3px;
+    width: 10px;
+    background-color: greenyellow;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+    position: absolute;
+    top: 398px;
+    left: 340px;
+}
+
+
+i{
+    position: absolute;
+    height: 200px;
+    background: white;
+    animation: animateRain 5s linear infinite;
+}
+
+@keyframes animateRain {
+    0%{
+        transform: translate(-200px);
+    }
+    100%{
+        transform: translateY(calc(100vh + 200px));
+    }
+}
+
+
+
+
+i {
+    position: absolute;
+    top: -250px;
+    background: white;
+    animation: animateStars linear infinite;
+}
+
+
+@Keyframes animateStars{
+
+    0%{
+        transform: translateX(100vw);
+    }
+
+    100%{
+        transform: translateX(0vw);
+    }
+
+}
+
+
+#enemy, #enemy2, #enemy3, #enemy4, #enemy5{
+    transform: rotate(-90deg);
+    width: 4%;
+    position: absolute;
+    left: 1600px;
+}
+
+#enemy{
+    top: 0px;
+}
+
+#enemy2{
+    top: 150px;
+}
+
+#enemy3{
+    top: 300px;
+}
+
+#enemy4{
+    top: 450px;
+}
+
+#enemy5{
+    top: 600px;
+}
